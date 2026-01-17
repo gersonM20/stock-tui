@@ -10,16 +10,22 @@ import (
 	"github.com/spf13/viper"
 )
 
-func Load() (*models.AppConfig, error) {
-	viper.SetConfigName("config")
-	viper.SetConfigType("toml")
+func Load(customPath string) (*models.AppConfig, error) {
+	if customPath != "" {
+		viper.SetConfigFile(customPath)
+	} else if envPath := os.Getenv("STOCK_TUI_CONFIG"); envPath != "" {
+		viper.SetConfigFile(envPath)
+	} else {
+		viper.SetConfigName("config")
+		viper.SetConfigType("toml")
+		viper.AddConfigPath(".")
 
-	// Search paths
-	home, err := os.UserHomeDir()
-	if err == nil {
-		viper.AddConfigPath(filepath.Join(home, ".config", "stock-tui"))
+		// XDG / Standard paths
+		configDir, err := os.UserConfigDir()
+		if err == nil {
+			viper.AddConfigPath(filepath.Join(configDir, "stock-tui"))
+		}
 	}
-	viper.AddConfigPath(".")
 
 	// Defaults
 	viper.SetDefault("symbols", []string{"BTC-USD", "ETH-USD", "AAPL", "GOOGL"})

@@ -33,7 +33,18 @@ Good for trying out the app with default settings.
 go install github.com/ni5arga/stock-tui/cmd/stock-tui@latest
 ```
 
-**Note:** `go install` does not download the configuration file. To customize the app (e.g., to add your own stocks/crypto), you must manually download the config:
+## Configuration
+
+The app looks for configuration in the following order:
+
+1. **CLI Flag**: `--config` / `-c` (e.g., `stock-tui -c /path/to/conf.toml`)
+2. **Environment Variable**: `STOCK_TUI_CONFIG`
+3. **User Config Directory** (XDG supported):
+   - Linux/Mac: `~/.config/stock-tui/config.toml`
+   - Windows: `%APPDATA%\stock-tui\config.toml`
+4. **Current Directory**: `./config.toml`
+
+A sample `config.toml` is included in the repo. To use it system-wide:
 
 ```bash
 mkdir -p ~/.config/stock-tui
