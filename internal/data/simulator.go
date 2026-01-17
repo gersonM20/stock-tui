@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/nisarga/stock-tui/internal/models"
+	"github.com/ni5arga/stock-tui/internal/models"
 )
 
 type Simulator struct {
@@ -87,7 +87,7 @@ func (s *Simulator) GetHistory(symbol string, tr models.TimeRange) ([]models.Can
 		volatility := currentPrice * 0.01
 		open := currentPrice
 		close := currentPrice + (rand.Float64()-0.5)*volatility
-		
+
 		high := math.Max(open, close) + rand.Float64()*volatility*0.5
 		low := math.Min(open, close) - rand.Float64()*volatility*0.5
 
@@ -99,7 +99,7 @@ func (s *Simulator) GetHistory(symbol string, tr models.TimeRange) ([]models.Can
 			Close:     close,
 			Volume:    rand.Float64() * 1000,
 		}
-		
+
 		currentPrice = close
 	}
 

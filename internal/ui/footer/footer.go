@@ -6,7 +6,7 @@ import (
 
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
-	"github.com/nisarga/stock-tui/internal/models"
+	"github.com/ni5arga/stock-tui/internal/models"
 )
 
 type Model struct {

@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/nisarga/stock-tui/internal/models"
+	"github.com/ni5arga/stock-tui/internal/models"
 )
 
 const coingeckoBase = "https://api.coingecko.com/api/v3"

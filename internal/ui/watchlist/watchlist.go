@@ -7,8 +7,8 @@ import (
 	"github.com/charmbracelet/bubbles/list"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
-	"github.com/nisarga/stock-tui/internal/models"
-	"github.com/nisarga/stock-tui/internal/ui/styles"
+	"github.com/ni5arga/stock-tui/internal/models"
+	"github.com/ni5arga/stock-tui/internal/ui/styles"
 )
 
 type Model struct {

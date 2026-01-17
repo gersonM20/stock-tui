@@ -6,8 +6,8 @@ import (
 
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
-	"github.com/nisarga/stock-tui/internal/models"
-	"github.com/nisarga/stock-tui/internal/ui/styles"
+	"github.com/ni5arga/stock-tui/internal/models"
+	"github.com/ni5arga/stock-tui/internal/ui/styles"
 )
 
 type ChartType int
@@ -137,7 +137,7 @@ func (m Model) render() string {
 	b.WriteString(lipgloss.NewStyle().Foreground(trendColor).Bold(true).Render(
 		fmt.Sprintf("$%.2f (%+.2f%%)", lastP, pct)))
 	b.WriteString("  ")
-	b.WriteString(lipgloss.NewStyle().Foreground(styles.ColorSubtext).Render("["+m.ChartTypeName()+"]"))
+	b.WriteString(lipgloss.NewStyle().Foreground(styles.ColorSubtext).Render("[" + m.ChartTypeName() + "]"))
 	b.WriteString("\n\n")
 
 	// Build canvas (plain runes, style later per-row)

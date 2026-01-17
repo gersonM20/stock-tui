@@ -1,4 +1,4 @@
-module github.com/nisarga/stock-tui
+module github.com/ni5arga/stock-tui
 
 go 1.25.1
 

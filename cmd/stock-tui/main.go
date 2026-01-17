@@ -5,8 +5,8 @@ import (
 	"os"
 
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/nisarga/stock-tui/internal/app"
-	"github.com/nisarga/stock-tui/internal/config"
+	"github.com/ni5arga/stock-tui/internal/app"
+	"github.com/ni5arga/stock-tui/internal/config"
 )
 
 func main() {

@@ -3,7 +3,7 @@ package data
 import (
 	"fmt"
 
-	"github.com/nisarga/stock-tui/internal/models"
+	"github.com/ni5arga/stock-tui/internal/models"
 )
 
 // Provider defines the interface for data sources.

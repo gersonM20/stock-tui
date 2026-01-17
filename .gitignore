@@ -1,6 +1,6 @@
 # Binaries
 #
-stock-tui
+/stock-tui
 *.exe
 *.exe~
 *.dll
