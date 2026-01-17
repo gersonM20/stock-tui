@@ -15,13 +15,13 @@ Real-time stock and cryptocurrency tracker for the terminal.
 ## Installation
 
 ```bash
-go install github.com/nisarga/stock-tui/cmd/stock-tui@latest
+go install github.com/ni5arga/stock-tui/cmd/stock-tui@latest
 ```
 
 Or build from source:
 
 ```bash
-git clone https://github.com/nisarga/stock-tui.git
+git clone https://github.com/ni5arga/stock-tui.git
 cd stock-tui
 go build ./cmd/stock-tui
 ./stock-tui
