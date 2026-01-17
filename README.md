@@ -14,11 +14,9 @@ Real-time stock and cryptocurrency tracker for the terminal.
 
 ## Installation
 
-```bash
-go install github.com/ni5arga/stock-tui/cmd/stock-tui@latest
-```
+### Method 1: Build from Source (Recommended)
 
-Or build from source:
+This method ensures you have the configuration file and all assets immediately available.
 
 ```bash
 git clone https://github.com/ni5arga/stock-tui.git
@@ -27,17 +25,19 @@ go build ./cmd/stock-tui
 ./stock-tui
 ```
 
-## Configuration
+### Method 2: Go Install (Quick Start)
 
-The app looks for config in this order:
-1. `~/.config/stock-tui/config.toml` — user config
-2. `./config.toml` — current directory
+Good for trying out the app with default settings.
 
-A sample `config.toml` is included in the repo. To use it system-wide:
+```bash
+go install github.com/ni5arga/stock-tui/cmd/stock-tui@latest
+```
+
+**Note:** `go install` does not download the configuration file. To customize the app (e.g., to add your own stocks/crypto), you must manually download the config:
 
 ```bash
 mkdir -p ~/.config/stock-tui
-cp config.toml ~/.config/stock-tui/
+curl -sL https://raw.githubusercontent.com/ni5arga/stock-tui/main/config.toml > ~/.config/stock-tui/config.toml
 ```
 
 **Example config.toml:**
