@@ -137,4 +137,4 @@ go vet ./...
 
 ## License
 
-MIT
+[MIT](https://github.com/ni5arga/stock-tui/blob/main/LICENSE)
