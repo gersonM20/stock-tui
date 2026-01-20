@@ -119,6 +119,23 @@ func (m Model) Init() tea.Cmd {
 
 func (m Model) Update(msg tea.Msg) (Model, tea.Cmd) {
 	var cmd tea.Cmd
+
+	switch msg := msg.(type) {
+	case tea.MouseMsg:
+		if msg.Action == tea.MouseActionPress && msg.Button == tea.MouseButtonLeft {
+			// Check if click is within bounds
+			if msg.X >= 0 && msg.X < m.width && msg.Y >= 0 && msg.Y < m.height {
+				// Account for top border (1 line) and adjust for reported offset
+				// Previous: msg.Y - 1. User reported selecting 2 steps upwards (Index-2).
+				// Fix: Add 2 to the result -> (msg.Y - 1) + 2 = msg.Y + 1.
+				index := msg.Y + 1 + m.list.Paginator.Page*m.list.Paginator.PerPage
+				if index >= 0 && index < len(m.list.Items()) {
+					m.list.Select(index)
+				}
+			}
+		}
+	}
+
 	m.list, cmd = m.list.Update(msg)
 	return m, cmd
 }
