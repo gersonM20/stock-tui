@@ -91,7 +91,7 @@ func (m Model) View() string {
 	if m.err != nil {
 		timeStr = "Error"
 	}
-	right := base.Render(fmt.Sprintf(" %s  ? Help  q Quit ", timeStr))
+	right := base.Render(fmt.Sprintf(" %s  / Search  s Sort  ? Help  q Quit ", timeStr))
 
 	leftW := lipgloss.Width(left)
 	rightW := lipgloss.Width(right)

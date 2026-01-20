@@ -24,6 +24,9 @@ func New() Model {
 		bindings: []Binding{
 			{"j/↓", "Move down"},
 			{"k/↑", "Move up"},
+			{"/", "Search symbols"},
+			{"s", "Cycle sort (Name/Price/%)"},
+			{"S", "Toggle sort direction"},
 			{"Tab", "Cycle time range"},
 			{"1-4", "Select time range"},
 			{"c", "Cycle chart type"},
