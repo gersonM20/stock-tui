@@ -29,7 +29,7 @@ func main() {
 	}
 	defer model.Close()
 
-	p := tea.NewProgram(model, tea.WithAltScreen(), tea.WithMouseAllMotion())
+	p := tea.NewProgram(model, tea.WithAltScreen(), tea.WithMouseCellMotion())
 	if _, err := p.Run(); err != nil {
 		fmt.Fprintf(os.Stderr, "Error running program: %v\n", err)
 		os.Exit(1)
